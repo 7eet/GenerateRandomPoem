@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [repos, setRepos] = useState([]);
+
+  useEffect(()=>{
+    const url = 'https://poetrydb.org/random';
+    fetch(url).then(response => response.json()).then(data => setRepos(data));
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Home dataPassing={repos} />
+      <Footer />
     </div>
   );
 }
