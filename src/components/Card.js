@@ -10,9 +10,9 @@ const Card = ({ data }) => {
             <h6 className="card-subtitle text-muted">Author: {data.author}</h6>
           </div>
           <div className="text-center py-3">
-            {
-                data.lines.map(e => (<p className="card-text">{e}</p>))
-            }
+            {data.lines.map((e) => (
+              <p className="card-text">{e}</p>
+            ))}
           </div>
         </div>
       </div>

@@ -1,6 +1,23 @@
 .flexForMd {
   display: block;
 }
+.relaod-btn-section {
+  display: flex;
+  justify-content: end;
+}
+
+.reload-btn {
+  padding: 10px;
+  background-color: #f8f9fa;
+  color: #212529;
+  border: none;
+}
+
+
+.reload-btn:hover {
+  background-color: #212529;
+  color: #f8f9fa;
+}
 
 body {
   background-color: #212529 !important;

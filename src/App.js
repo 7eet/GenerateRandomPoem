@@ -7,15 +7,21 @@ import { useEffect, useState } from 'react';
 function App() {
   const [repos, setRepos] = useState([]);
 
+  const url = 'https://poetrydb.org/random';
+
   useEffect(()=>{
-    const url = 'https://poetrydb.org/random';
+    reload();
+  }, []);
+
+
+  const reload = () => {
     fetch(url).then(response => response.json()).then(data => setRepos(data));
-  }, [])
+  }
 
   return (
     <div>
       <Header />
-      <Home dataPassing={repos} />
+      <Home dataPassing={repos} reload={reload} />
       <Footer />
     </div>
   );
