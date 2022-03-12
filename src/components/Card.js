@@ -38,7 +38,7 @@ const Card = ({ data, reload, loading }) => {
             <h5 className="card-title">Title: {data.title}</h5>
             <h6 className="card-subtitle text-muted">Author: {data.author}</h6>
           </div>
-          <div className="text-center py-3">
+          <div className="text-center card-content py-3">
             {data.lines.map((e) => (
               <p className="card-text">{e}</p>
             ))}
