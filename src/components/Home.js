@@ -23,7 +23,7 @@ const Home = ({ dataPassing, reload }) => {
         </button>
       </div>
       {dataPassing.map((e) => {
-        return <Card key={e.linecount} data={e} />;
+        return <Card key={e.linecount+Math.random()} data={e} />;
       })}
     </div>
   );

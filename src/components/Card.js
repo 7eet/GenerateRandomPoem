@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = ({ data }) => {
   return (
-    <div className="card mx-3 mx-md-5 my-3" key={data.key}>
+    <div className="card mx-3 mx-md-5 my-3" key={data.url}>
       <div className="card">
         <div className="card-body">
           <div className="flexForMd py-3">
