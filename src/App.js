@@ -5,7 +5,7 @@ import Home from './components/Home';
 import { useEffect, useState } from 'react';
 
 function App() {
-  const [repos, setRepos] = useState([]);
+  const [repos, setRepos] = useState({isLoading: true, data: []});
 
   const url = 'https://poetrydb.org/random';
   // const url = "https://www.poemist.com/api/v1/randompoems";
@@ -16,7 +16,8 @@ function App() {
 
 
   const reload = () => {
-    fetch(url).then(response => response.json()).then(data => setRepos(data));
+    setRepos({isLoading: true, data: []});
+    fetch(url).then(response => response.json()).then(data => setRepos({isLoading: false, data: data}));
   }
 
   return (

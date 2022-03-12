@@ -2,6 +2,11 @@ body {
   font-family: 'Noto Sans', sans-serif !important;
 }
 
+.card {
+  border-radius: 20px !important;
+  border: none !important;
+}
+
 .flexForMd {
   display: block;
 }
@@ -12,15 +17,16 @@ body {
 
 .reload-btn {
   padding: 10px;
-  background-color: #f8f9fa;
-  color: #212529;
+  background-color: #212529;
+  color: #f8f9fa;
   border: none;
+  border-top-right-radius: 10px;
 }
 
 
 .reload-btn:hover {
-  background-color: #212529;
-  color: #f8f9fa;
+  background-color: #ffffff;
+  color: #212529;
 }
 
 body {
