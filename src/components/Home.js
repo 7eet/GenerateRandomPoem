@@ -11,6 +11,7 @@ const Home = ({ dataPassing, reload }) => {
     return (
       <div className="home">
         {dataPassing.data.map((e) => {
+          console.log(window.location.host);
         return (
           <Card key={e.linecount + Math.random()} data={e} reload={reload} />
         );
